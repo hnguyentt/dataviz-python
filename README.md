@@ -4,6 +4,4 @@
 
 ** **
 
-The source codes, which are published on GitHub, in this book were writen in R. In this project, I will try to apply what I have learned from the book and replicate them in **Python**.
-
-
+The source codes, which are published on GitHub ([dataviz](https://github.com/clauswilke/dataviz)), in this book were writen in R. In this project, I will try to apply what I have learned from the book and replicate them in **Python**.

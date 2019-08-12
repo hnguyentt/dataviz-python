@@ -1,0 +1,13 @@
+Month,Day,Location,Station ID,Temperature
+Jan,1,Chicago,USW00014819,25.6
+Jan,1,San Diego,USW00093107,55.2
+Jan,1,Houston,USW00012918,53.9
+Jan,1,Death Valley,USC00042319,51
+Jan,2,Chicago,USW00014819,25.5
+Jan,2,San Diego,USW00093107,55.3
+Jan,2,Houston,USW00012918,53.8
+Jan,2,Death Valley,USC00042319,51.2
+Jan,3,Chicago,USW00014819,25.3
+Jan,3,San Diego,USW00093107,55.3
+Jan,3,Death Valley,USC00042319,51.3
+Jan,3,Houston,USW00012918,53.8

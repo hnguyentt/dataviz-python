@@ -1,0 +1,2 @@
+plotnine==0.5.1
+pandas==0.24.2
