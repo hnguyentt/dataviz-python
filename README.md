@@ -1,7 +1,7 @@
 # Fundamentals of Data Visualization
 
 [Book](https://serialmentor.com/dataviz/index.html) by: [Claus O. Wilke](https://wilkelab.org/)
-Source: [dataviz](https://github.com/clauswilke/dataviz)
+<br>Source: [dataviz](https://github.com/clauswilke/dataviz)
 
 ** **
 
@@ -21,8 +21,23 @@ I reproduce the visualization from the book in **Python** and brief some importa
 
 <!-- /MarkdownTOC -->
 
+## 1. Prerequisites
+To run the code, several packages stated in the `requirements.sh` are required.
+Install [Miniconda3](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/) before running the following command:
+```bash
+chmod 755 requirements.sh
+./requirements.sh
+``` 
+After installation, a virtual environment called `dataviz` will be created and activated. The script requirements.sh also handled the reported issues in part 4.
 
-## 1. Data visualization in Python
+## 2. Data
+All data required for visualization practice are acquired from [dviz.supp](https://github.com/clauswilke/dviz.supp/tree/master/data) of Clause O.Wilke.
+For quicker load into Python, I wll covert these `rda` file to `tsv` format using the script `data/rda2tsv.py` and save all data in folder `data/resources`.
+
+## 3. Data visualization in Python
+<details>
+<summary><font color="#0F24F3>Click here to show more</font></summary>
+
 ### Libraries/Package
 * `plotnine`:
     + [Data visualization in Python like in R’s ggplot2](https://medium.com/@gscheithauer/data-visualization-in-python-like-in-rs-ggplot2-bc62f8debbf5)
@@ -39,16 +54,9 @@ I reproduce the visualization from the book in **Python** and brief some importa
 - [Blog](https://towardsdatascience.com/interactive-controls-for-jupyter-notebooks-f5c94829aee6)
 * `holoviz`: [Github](https://github.com/holoviz/holoviz)
 
-## 2. Installation
-To run the code, several packages stated in the `requirements.txt` are required.
-Install [Miniconda3](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/) before running the following command:
-```bash
-chmod 755 requirements.sh
-./requirements.sh
-``` 
-After installation, a virtual environment called `dataviz` will be created and activated. The script requirements.txt also handled the reported issues in part 4.
+</details>
 
-## 3. Directory structure
+## 4. Directory structure
 ```
 .
 ├── 1.From_data_to_viz
@@ -63,8 +71,18 @@ After installation, a virtual environment called `dataviz` will be created and a
     └── utils.py
 ```
 
-## 4. Issues
-(1) `ggplot`
+## 5. Issues
+(1) Install `rpy2` on MacOSx
+Using `pip install rpy2` on MacOSx will turn out this error:
+`ERROR: Failed building wheel for rpy2`
+
+Workaround: https://stackoverflow.com/a/52362473/11524628
+```bash
+env CC=/usr/local/Cellar/gcc/X.x.x/bin/gcc-X pip install rpy2
+```
+X.x.x is the latest version of gcc in MacOSx
+
+(2) `ggplot`
 
 All problems related to `ggplot` can be fixed by downgrading the version of pandas:
 ```bash
