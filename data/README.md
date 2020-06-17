@@ -11,5 +11,5 @@ To do the conversion, run:
 python rda2tsv.py
 ```
 
-Currently, 7 files have errors that can not be converted. They are listed in `errors.txt`
+Currently, 11 files have errors that can not be converted. They are listed in `errors.txt`
 

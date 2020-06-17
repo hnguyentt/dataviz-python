@@ -12,7 +12,7 @@ from src.dataUtils import txt2list
 BASE_URL = "https://github.com/clauswilke/dviz.supp/raw/master/data/"
 
 if __name__=="__main__":
-    files = txt2list(os.path.join(os.path.dirname(__file__),"rda_ls.txt"))
+    files = txt2list(os.path.join(os.path.dirname(__file__),"../rda_ls.txt"))
     print("Number of rda files: {}".format(len(files)))
 
     errors = []
@@ -22,7 +22,8 @@ if __name__=="__main__":
         print("\n{}. Convert file {}".format(i,f))
         try:
             wget.download("{}/{}".format(BASE_URL,f))
-            data = pyreadr.read_r(os.path.join(os.path.dirname(__file__),f))
+            data = pyreadr.read_r(os.path.join(os.path.dirname(__file__),f), timezone='CET')
+            print(data)
             if len(data) == 0:
                 print("\nError: {}".format(f))
                 errors.append(f)
@@ -44,5 +45,5 @@ if __name__=="__main__":
     errors = list(set(errors))
 
     if len(errors) > 0:
-        with open(os.path.join(os.path.dirname(__file__),"errors.txt"),"w") as f:
+        with open(os.path.join(os.path.dirname(__file__),"../errors.txt"),"w") as f:
             f.writelines(["{}\n".format(e) for e in errors])
