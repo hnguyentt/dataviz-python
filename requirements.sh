@@ -10,6 +10,7 @@ pip install ggplot==0.11.5
 pip install plotly
 pip install pyreadr
 pip install wget
+pip install seaborn
 
 # FIX BUGS
 # Fix ggplot issues from import pandas (reported in README)
