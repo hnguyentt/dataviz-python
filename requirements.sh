@@ -11,6 +11,9 @@ pip install plotly
 pip install pyreadr
 pip install wget
 pip install seaborn
+pip install geopandas
+pip install contextily
+
 
 # FIX BUGS
 # Fix ggplot issues from import pandas (reported in README)
