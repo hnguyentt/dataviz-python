@@ -4,7 +4,7 @@ conda install jupyter
 conda install nb_conda
 conda install ipykernel
 # python -m ipykernel install --user --name dataviz
-pip install plotly
+conda install -c plotly plotly-geo
 pip install pyreadr
 pip install wget
 pip install seaborn
