@@ -1,8 +1,39 @@
 import matplotlib.pyplot as plt
+import seaborn as sns
+import matplotlib as mpl
 from seaborn.categorical import _ViolinPlotter
 import numpy as np
 from scipy.stats import gaussian_kde
 from sklearn.linear_model import LinearRegression
+
+
+def palplot(pal, space=1, size=1, ax=None):
+    """Plot the values in a color palette as a horizontal array.
+    Parameters
+    ----------
+    pal : sequence of matplotlib colors
+        colors, i.e. as returned by seaborn.color_palette()
+    size :
+        scaling factor for size of plot
+    ax :
+        an existing axes to use
+    """
+
+    n = len(pal)
+    if ax is None:
+        f, ax = plt.subplots(1, 1, figsize=(n * size, size))
+        
+    ax.imshow(np.arange(n).reshape(1, n),
+              cmap=mpl.colors.ListedColormap(list(pal)),
+              interpolation="nearest", aspect="auto")
+    ax.set_xticks(np.arange(n-1) + 0.5)
+    ax.set_yticks([])
+    ax.grid(color='white', linewidth=space)
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.spines['bottom'].set_visible(False)
+    ax.spines['left'].set_visible(False)
+    ax.tick_params(top=False, bottom=False, left=False, right=False, labelleft=False, labelbottom=False);
 
 class _SinaPlotter(_ViolinPlotter):
     """
@@ -221,3 +252,5 @@ def ridgeline(data, ax=None, overlap=0, fill=None, labels=None, n_points=150, **
         ax.plot(xx, curve+y, c=fill[i], zorder=len(data)-i+1)
     if labels:
         ax.yticks(ys, labels)
+
+        

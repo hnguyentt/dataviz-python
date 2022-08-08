@@ -11,5 +11,6 @@ pip install seaborn
 pip install geopandas
 pip install contextily
 pip install sklearn
+pip install statsmodels
 pip install git+https://github.com/retostauffer/python-colorspace
 conda install -c conda-forge cartopy
