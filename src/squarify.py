@@ -5,6 +5,7 @@
 
 # INTERNAL FUNCTIONS not meant to be used by the user
 
+
 def pad_rectangle(rect, pad=1):
     if rect["dx"] > 2*pad:
         rect["x"] += pad
