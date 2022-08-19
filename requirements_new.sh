@@ -15,3 +15,4 @@ pip install statsmodels
 pip install squarify
 pip install git+https://github.com/retostauffer/python-colorspace
 conda install -c conda-forge cartopy
+conda install geoplot -c conda-forge
