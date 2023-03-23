@@ -5,19 +5,21 @@
 
 ** **
 
-I reproduce the visualization from the book in **Python** and brief some important information (for me).
+I recreated the visualization originally coded in R, from the book "Fundamentals of Data Visualization" by Claus O. Wilke, using **Python** and brief some important information.
 <br>Access the [full book](https://serialmentor.com/dataviz/index.html) for more details.
 
 **Table of Contents:**
 
 <!-- MarkdownTOC autolink=true -->
 
-- [1. Data visualization in Python](#1-data-visualization-in-python)
-	- [Libraries/Package](#librariespackage)
-	- [Tools to simplify data visualization](#tools-to-simplify-data-visualization)
-- [2. Installation](#2-installation)
-- [3. Directory structure](#3-directory-structure)
-- [4. Issues](#4-issues)
+- [Fundamentals of Data Visualization](#fundamentals-of-data-visualization)
+  - [1. Prerequisites](#1-prerequisites)
+  - [2. Data](#2-data)
+  - [3. Data visualization in Python](#3-data-visualization-in-python)
+    - [Libraries/Package](#librariespackage)
+    - [Tools to simplify data visualization](#tools-to-simplify-data-visualization)
+  - [4. Directory structure](#4-directory-structure)
+  - [5. Issues](#5-issues)
 
 <!-- /MarkdownTOC -->
 

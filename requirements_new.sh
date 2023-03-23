@@ -1,8 +1,8 @@
 # conda create --name dataviz python=3.9
 # conda activate dataviz
-conda install jupyter
-conda install nb_conda
-conda install ipykernel
+# conda install jupyter
+# conda install nb_conda
+# conda install ipykernel
 # python -m ipykernel install --user --name dataviz
 conda install -c plotly plotly-geo
 pip install pyreadr
